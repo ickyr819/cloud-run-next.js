@@ -1,0 +1,91 @@
+.root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.HomePagefontcolor {
+  color :white
+}
+.HomePagebackgroundcolor{
+  background-color: #0080f8;
+}
+.HomePageAboutMeTitlefontcolor {
+  color : blue
+}
+.HomePageAboutMebackgroundcolor{
+  background-color: #fdf0e3;
+}
+.HomePageAboutMeContentfontcolor {
+  color :#0080f8
+}
+
+.HomePagefont {
+  font-family:Neue Haas Unica ;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FATIB';
+  src: url(https://cdn.nitroapps.co/fontify/fd1a3d-c1.myshopify.com/fatib.otf?v=1710436214);
+  font-display: swap;
+}
+
+.AnimationBounce {
+  animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+.AnimationWave {
+  animation: wave 2s ease-in-out infinite;
+}
+@keyframes wave {
+  0% {
+    transform: translateY(0px) rotate(0deg) ;
+  }
+  50% {
+    transform: translateY(3px) rotate(5deg) ;
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg) ;
+  }
+}
+
+.AnimationScale {
+  animation: scale 2s ease-in-out infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.AnimationDropIn {
+  animation: dropIn 1s ease forwards infinite;
+}
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
