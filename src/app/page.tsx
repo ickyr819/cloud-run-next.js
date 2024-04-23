@@ -63,7 +63,7 @@ const Content2: React.FC = () => (
       Currently, I&apos;m learning Next.js during my free time... This is just one of the prototypes I&apos;m working on, but I&apos;m eager to continue exploring and experimenting.<br /><br />
         </div>
       </div>
-      <div className="bg-black bg-opacity-30 py-4 px-8 rounded-lg text-center h-full flex justify-between">
+      <div className="bg-black bg-opacity-0 py-4 px-8 rounded-lg text-center h-full flex justify-between">
       <Image src="/images/python.png" alt="Python" width={40} height={40} className="mt-2"/>
       <Image src="/images/mysql.png" alt="mysql" width={40} height={40} className="mt-2"/>
       <Image src="/images/nextjs.png" alt="next.js" width={120} height={40} className="mt-2"/>
