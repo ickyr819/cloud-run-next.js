@@ -64,11 +64,7 @@ const Content2: React.FC = () => (
         </div>
       </div>
       <div className="bg-black bg-opacity-0 py-4 px-8 rounded-lg text-center h-full flex justify-between">
-      <Image src="/images/python.png" alt="Python" width={40} height={40} className="mt-2"/>
-      <Image src="/images/mysql.png" alt="mysql" width={40} height={40} className="mt-2"/>
-      <Image src="/images/nextjs.png" alt="next.js" width={120} height={40} className="mt-2"/>
-      <Image src="/images/UiPath.png" alt="UiPath" width={60} height={40} className="mt-2"/>
-      <Image src="/images/AA.png" alt="AA" width={40} height={40} className="mt-2"/>
+      <Image src="/images/program language.png" alt="program language" width={1200} height={40} className="mt-2" />
       </div>
       <br /><br />
       <a className="scale-in-center-2 anim-delay-700 text-white group bg-yellow-400 rounded inline-block text-xl md:text-2xl transition hover:bg-white focus:ring ring-opacity-50 ring-yellow-400" href="">
