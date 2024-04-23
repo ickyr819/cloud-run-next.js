@@ -60,7 +60,7 @@ const Content2: React.FC = () => (
       Hi, I&apos;m Yu-Chun Ko, also you can call me Ricky. I graduated from National ChiNan University (NCNU), majoring in Information Management.<br></br>
       My studies covered a wide range of topics which includes machine learning, deep learning, big data, and model building. I&apos;m skilled in using Python, Mysql, UiPath, and Automation Anywhere to solve various problems.
       <br /><br />
-      Currently, I&apos;m learning Next.js during my free time... This is just one of the prototypes I&apos;m working on, but but I&apos;m eager to continue exploring and experimenting.<br /><br />
+      Currently, I&apos;m learning Next.js during my free time... This is just one of the prototypes I&apos;m working on, but I&apos;m eager to continue exploring and experimenting.<br /><br />
         </div>
       </div>
       <div className="bg-black bg-opacity-30 py-4 px-8 rounded-lg text-center h-full flex justify-between">
