@@ -49,7 +49,7 @@ const Content1: React.FC = () => (
 const Content2: React.FC = () => (
   <div className={`${styles.HomePageAboutMeTitlefontcolor} ${styles.HomePagefont} ${styles.HomePageAboutMebackgroundcolor} flex-grow`} style={{ lineHeight: "100vh" }}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" transform="rotate(180)" style={{ position: "absolute", top: "100%", left: 0, width: "100%" }}>
-        <path fill="#b3fad7" fill-opacity="1" d="M0,128L60,144C120,160,240,192,360,202.7C480,213,600,203,720,197.3C840,192,960,192,1080,181.3C1200,171,1320,149,1380,138.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+        <path fill="#b3fad7" fillOpacity="1" d="M0,128L60,144C120,160,240,192,360,202.7C480,213,600,203,720,197.3C840,192,960,192,1080,181.3C1200,171,1320,149,1380,138.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
       </svg>
     <div id="home-about-content" className="inline-block align-middle leading-normal py-8 px-4 max-w-full text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl" style={{ width: "65ch", fontFamily: 'FATIB'}}>
       <h2 className={`${styles.AnimationWave}  text-5xl sm:text-7xl md:text-8xl `}>About Me</h2>
