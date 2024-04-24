@@ -9,8 +9,7 @@ export const metadata: Metadata = {
     absolute :"",
     default : "Ricky Ko",
     template　:"%s - blog"
-  }
-  
+  },
 };
 
 export default function RootLayout({

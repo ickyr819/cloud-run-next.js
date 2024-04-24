@@ -2,10 +2,9 @@ import React from 'react';
 import styles from './Page.module.css';
 import Image from 'next/image';
 import { Metadata } from 'next';
-
-export const metadata: Metadata ={
-  title:{
-    absolute : "Ricky Ko",
+export const metadata: Metadata = {
+  title: {
+    absolute: "Ricky Ko",
   },
 }
 
