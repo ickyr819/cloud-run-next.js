@@ -75,7 +75,7 @@
 }
 
 .AnimationDropIn {
-  animation: dropIn 1s ease forwards infinite;
+  animation: dropIn 1s ease-in ;
 }
 @keyframes dropIn {
   0% {

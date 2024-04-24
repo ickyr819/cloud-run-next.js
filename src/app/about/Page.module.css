@@ -75,15 +75,31 @@
 }
 
 .AnimationDropIn {
-  animation: dropIn 1s ease forwards infinite;
+  animation: dropIn 2s ease-in;
 }
 @keyframes dropIn {
   0% {
     opacity: 0;
-    transform: translateY(-60%);
+    transform: translateY(-100%);
   }
   100% {
     opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.AnimationJumpText {
+  display: inline-block;
+  animation: jump 0.5s ease-in-out infinite alternate;
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
     transform: translateY(0);
   }
 }

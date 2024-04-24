@@ -2,7 +2,7 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import styles from '../test/Page.module.css';
+import styles from '../about/Page.module.css';
 
 const TestPage = () => {
   const images = [
@@ -25,7 +25,9 @@ const TestPage = () => {
 const Introduce: React.FC<{images: string[]}> = ({ images }) => (
   <div className={`${styles.HomePageAboutMeTitlefontcolor} ${styles.HomePagefont} ${styles.HomePageAboutMebackgroundcolor} flex-grow`} style={{ lineHeight: "100vh" }}>
     <div id="home-about-content" className="inline-block align-middle leading-normal py-8 px-4 max-w-full text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl" style={{ width: "65ch", fontFamily: 'FATIB'}}>
-      <h2 className={` text-5xl sm:text-7xl md:text-6xl `}>2023 Wistron Summer Intern </h2>
+      <h2 className={`${styles.AnimationDropIn} text-5xl sm:text-7xl md:text-6xl `}>
+        <span>2023 Wistron Summer Intern</span>
+      </h2>
       <br></br>
       <Carousel autoPlay={true} interval={3000} infiniteLoop={true}>
         {images.map((imageUrl, index) => (
