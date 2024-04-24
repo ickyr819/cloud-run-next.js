@@ -29,7 +29,7 @@ const Introduce: React.FC<{images: string[]}> = ({ images }) => (
         <span>2023 Wistron Summer Intern</span>
       </h2>
       <br></br>
-      <Carousel autoPlay={true} interval={3000} infiniteLoop={true}>
+      <Carousel autoPlay={true} interval={3000} infiniteLoop={true} centerMode = {true}>
         {images.map((imageUrl, index) => (
           <div key={index}>
             <img src={imageUrl} alt={`slider-${index + 1}`} />
