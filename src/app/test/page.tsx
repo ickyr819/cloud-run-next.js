@@ -9,7 +9,6 @@ cloudinary.config({
   api_secret: process.env.NEXT_PUBLIC_CLOUDINARY_API_SECRET,
 });
 
-
 async function getData({ searchParams }: { searchParams: any }) {
   let expression = `folder=${process.env.NEXT_PUBLIC_CLOUDINARY_FOLDER}/*`;
   const query = searchParams.query;
