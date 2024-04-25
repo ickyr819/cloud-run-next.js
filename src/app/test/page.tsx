@@ -5,13 +5,13 @@ import Image from "next/image";
 
 cloudinary.config({
   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
+  api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
+  api_secret: process.env.NEXT_PUBLIC_CLOUDINARY_API_SECRET,
 });
 
 
 async function getData({ searchParams }: { searchParams: any }) {
-  let expression = `folder=${process.env.CLOUDINARY_FOLDER}/*`;
+  let expression = `folder=${process.env.NEXT_PUBLIC_CLOUDINARY_FOLDER}/*`;
   const query = searchParams.query;
 
   if (query) {
