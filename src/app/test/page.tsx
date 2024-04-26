@@ -1,7 +1,15 @@
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import {
+  Carousel,
+  CarouselMainContainer,
+  CarouselNext,
+  CarouselPrevious,
+  SliderMainItem,
+  CarouselThumbsContainer,
+  SliderThumbItem,
+} from "@/components/ui/carousel";
 import { v2 as cloudinary } from 'cloudinary';
 import styles from '../about/Page.module.css';
-import Image from "next/image";
+
 
 cloudinary.config({
   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
@@ -23,39 +31,53 @@ async function getData({ searchParams }: { searchParams: any }) {
 
 export default async function Page({ searchParams }: { searchParams: any }) {
   const resources = await getData({ searchParams });
-
   return (
-    <div className={`${styles.root} ${styles.HomePageAboutMeTitlefontcolor} ${styles.HomePagefont} ${styles.HomePageAboutMebackgroundcolor} flex-grow h-screen flex flex-col justify-center items-center text-center`} style={{ transform: 'scale(1.0)', transformOrigin: 'top left', lineHeight:'100vh' }}>
-    <div className="absolute w-full h-full inline-block align-middle leading-normal py-8 px-4 max-w-full text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl" style={{ width: "65ch", fontFamily: 'FATIB'}}>
-    <h2 className={`${styles.AnimationDropIn} text-5xl sm:text-7xl md:text-6xl `}>
-        <span>2023 Wistron Summer Intern</span>
+    <div className="h-screen flex flex-col justify-center items-center text-center" style={{ transform: 'scale(1.0)', transformOrigin: 'top left' }}>
+  <div id="home-about-content" className="absolute w-full h-full text-center inline-block align-middle leading-normal py-8 px-4 max-w-full text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl" style={{ width: "65ch", fontFamily: 'FATIB'}}>
+    <h2 className={`${styles.HomePageAboutMeTitlefontcolor} text-5xl sm:text-7xl md:text-6xl `}>
+      <span>Test</span>
     </h2>
-      <br></br>
-      <div>
-      <div className="columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4">
-      {resources.map((resource: any) => (
-        <div key={resource.public_id}>
-          {resource.resource_type === 'image' ? (
-            <Image
-              src={resource.secure_url}
-              alt=""
-              width={720}
-              height={480}
-              className="transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110"
+    <div className="flex-grow h-screen flex flex-col justify-center items-center text-center" style={{ position: 'relative', top: '-15vh'  }}>
+      <Carousel className="w-full max-w-md">
+        <CarouselNext className="top-1/3 -translate-y-1/3" />
+        <CarouselPrevious className="top-1/3 -translate-y-1/3" />
+        <CarouselMainContainer className="h-60">
+
+        {Array.from({ length: resources.length }).map((_, index) => (
+          <SliderMainItem key={index} className="bg-transparent">
+            {resources[index] && resources[index].secure_url && resources[index].resource_type === 'image' ? (
+              <img src={resources[index].secure_url} style={{ objectFit: 'cover', width: '100%', height: '100%' }}/>
+            ) : (
+              <video
+              src={resources[index].secure_url}
+              width={resources[index].width}
+              height={resources[index].height}
+              controls style={{ objectFit: 'cover', width: '100%', height: '100%' }}
             />
-          ) : (
-            <video
-              src={resource.secure_url}
-              width={resource.width}
-              height={resource.height}
-              controls
+            )}
+          </SliderMainItem>
+        ))}
+
+        </CarouselMainContainer>
+        <CarouselThumbsContainer>
+          {Array.from({ length: resources.length }).map((_, index) => (
+            <SliderThumbItem key={index} index={index} className="bg-transparent">
+              {resources[index] && resources[index].secure_url && resources[index].resource_type === 'image' ? (
+              <img src={resources[index].secure_url} style={{ objectFit: 'cover', width: '100%', height: '100%' }}/>
+            ) : (
+              <video
+              src={resources[index].secure_url}
+              width={resources[index].width}
+              height={resources[index].height}
+              controls style={{ objectFit: 'cover', width: '100%', height: '100%' }}
             />
-          )}
-        </div>
-      ))}
+            )}
+            </SliderThumbItem>
+          ))}
+        </CarouselThumbsContainer>
+      </Carousel>
     </div>
-    </div>
-    </div>
-    </div>
+  </div>
+</div>
   );
-}
+};
