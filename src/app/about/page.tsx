@@ -28,7 +28,6 @@ const Introduce: React.FC<{images: string[]}> = ({ images }) => (
       <h2 className={`${styles.AnimationDropIn} text-5xl sm:text-7xl md:text-6xl `}>
         <span>2023 Wistron Summer Intern</span>
       </h2>
-      <br></br>
       <Carousel autoPlay={true} interval={3000} infiniteLoop={true} centerMode = {true}>
         {images.map((imageUrl, index) => (
           <div key={index}>

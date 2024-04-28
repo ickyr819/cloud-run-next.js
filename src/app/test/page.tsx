@@ -63,7 +63,6 @@ export default async function Page({ searchParams }: { searchParams: any }) {
                   </Card>
                 </div>
                   <CarouselItem>
-                    <br></br>
                   <div>
                   {index+1} of {resources.length}
                   </div>
