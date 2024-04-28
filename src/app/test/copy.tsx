@@ -1,3 +1,4 @@
+"use client"
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
@@ -33,16 +34,14 @@ async function getData({ searchParams }: { searchParams: any }) {
 
 export default async function Page({ searchParams }: { searchParams: any }) {
   const resources = await getData({ searchParams });
-  
   return (
     <div className="h-screen flex flex-col justify-center items-center text-center" style={{ transform: 'scale(1.0)', transformOrigin: 'top left' }}>
       <div id="home-about-content" className="absolute w-full h-full text-center inline-block align-middle leading-normal py-8 px-4 max-w-full text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl" style={{ width: "65ch", fontFamily: 'FATIB'}}>
         <h2 className={`${styles.HomePageAboutMeTitlefontcolor} text-5xl sm:text-7xl md:text-6xl `}>
           <span>Test</span>
         </h2>
-        <br></br>
         <div className="flex justify-center items-center">
-          <Carousel className="w-full max-w-xl">
+          <Carousel className="w-full max-w-xs">
             <CarouselContent>
               {Array.from({ length: resources.length }).map((_, index) => (
               <CarouselItem key={index}>
@@ -62,18 +61,14 @@ export default async function Page({ searchParams }: { searchParams: any }) {
                     </CardContent>
                   </Card>
                 </div>
-                  <CarouselItem>
-                    <br></br>
-                  <div>
-                  {index+1} of {resources.length}
-                  </div>
-                  </CarouselItem>
               </CarouselItem>
               ))}
             </CarouselContent>
             <CarouselPrevious/>
             <CarouselNext/>
           </Carousel>
+        </div>
+        <div className="py-2 text-center text-sm text-muted-foreground">
         </div>
       </div>
     </div>
